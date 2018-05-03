@@ -66,10 +66,11 @@ void graphics::tanVo(QPainter &painter,int po){
     painter.setBrush(QColor("#02d135"));
     painter.setPen(QColor("#02d135"));
     int py = po;
+    int px = po;
     for (int i= 0 ; i<1000 ; i++){
         py += random(30);
-        int px = random(700);
-        painter.drawEllipse(width()/4+px , height()/3+ py,5,5);
+        px = random(700);
+        painter.drawEllipse(width()/4+px , height()/3+ py,2,2);
     }
     if (opacity_char ==0 ){
         opacity_broken =0;
