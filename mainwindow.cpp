@@ -18,8 +18,3 @@ void MainWindow::on_pushButton_clicked()
     ui->widget->mode = 1 ;
     ui->widget->x=0;
 }
-void MainWindow::on_pushButton_2_clicked()
-{
-    ui->widget->mode = 2;
-    ui->widget->x=0;
-}

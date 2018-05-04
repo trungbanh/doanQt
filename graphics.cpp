@@ -20,22 +20,14 @@ void graphics::paintEvent(QPaintEvent *){
     QPainter painter(this);
     int h = height();
     int w = width();
-
     QRadialGradient grad1(w/2, h/2, 100);
-
     grad1.setColorAt(0, QColor("#ff0000"));
     grad1.setColorAt(0.35, Qt::white);
     grad1.setColorAt(1, QColor("#020202"));
     painter.fillRect(0, 0, w, h, grad1);
-
     if (mode==1){
         paintchar(painter);
     }
-    if (mode==2){
-        id = startTimer(100);
-        tanVo(painter,po);
-    }
-
 }
 void graphics::paintchar(QPainter &painter) {
     painter.setOpacity(opacity_char);
@@ -70,7 +62,7 @@ void graphics::tanVo(QPainter &painter,int po){
     for (int i= 0 ; i<1000 ; i++){
         py += random(30);
         px = random(700);
-        painter.drawEllipse(width()/4+px , height()/3+ py,2,2);
+        painter.drawEllipse(width()/4+px , height()/3+ py,10,10);
     }
     if (opacity_char ==0 ){
         opacity_broken =0;
